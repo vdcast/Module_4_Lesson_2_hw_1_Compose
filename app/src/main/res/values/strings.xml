@@ -9,8 +9,17 @@
     <string name="animated_content">Animated Content</string>
     <string name="crossfade">Crossfade</string>
     <string name="modifier_animateContentSize">Modifier.animateContentSize</string>
+    <string name="animatable">Animatable</string>
+    <string name="animate_as_state">animate*AsState</string>
+    <string name="animation_target_based_animation">Animation: TargetBasedAnimation</string>
+    <string name="animation_decay_animation">Animation: DecayAnimation</string>
+    <string name="update_transition">updateTransition</string>
+    <string name="remember_infinite_transition">rememberInfiniteTransition</string>
     <string name="change_visibility">Change visibility</string>
     <string name="long_text">Very large text! Such a large text that does not fit in one line. It must be moved to several lines. Then it will look much better. Otherwise, the user won\'t get what we wanna say.</string>
     <string name="some_text">Some text that can be displayed on the screen.</string>
     <string name="title">Title (clickable)</string>
+    <string name="rotate">Rotate</string>
+    <string name="start_animation">Start animation</string>
+    <string name="nothing">Do nothing</string>
 </resources>

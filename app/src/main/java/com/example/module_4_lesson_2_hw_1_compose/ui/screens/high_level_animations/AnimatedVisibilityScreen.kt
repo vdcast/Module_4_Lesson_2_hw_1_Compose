@@ -41,7 +41,7 @@ fun AnimatedVisibilityScreen() {
     ) {
         Text(
             modifier = Modifier.fillMaxWidth(0.8f),
-            text = stringResource(id = R.string.animated_visibility_1),
+            text = stringResource(id = R.string.animated_visibility),
             textAlign = TextAlign.Center
         )
         AnimatedVisibility(
@@ -53,7 +53,7 @@ fun AnimatedVisibilityScreen() {
                     + shrinkHorizontally() + fadeOut()
         ) {
             Image(
-                painter = painterResource(id = R.drawable.colored_cards_128x128),
+                painter = painterResource(id = R.drawable.vd_cast_green_mono_1_128x128_rounded_corner),
                 contentDescription = "animated_visibility_1"
             )
         }
@@ -63,7 +63,7 @@ fun AnimatedVisibilityScreen() {
             exit = fadeOut(animationSpec = tween(durationMillis = 300))
         ) {
             Image(
-                painter = painterResource(id = R.drawable.colored_cards_128x128),
+                painter = painterResource(id = R.drawable.vd_cast_green_mono_1_128x128_rounded_corner),
                 contentDescription = "animated_visibility_1"
             )
         }

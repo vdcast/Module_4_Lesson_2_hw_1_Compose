@@ -95,6 +95,7 @@ fun Collapsed(
         modifier = Modifier
             .background(Green20)
             .fillMaxWidth(0.95f)
+            .clickable { onImageClick() }
             .padding(dimensionResource(id = R.dimen.padding_small)),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
@@ -110,7 +111,8 @@ fun Collapsed(
                 .size(dimensionResource(id = R.dimen.padding_large))
                 .clickable { onImageClick() },
             painter = painterResource(id = R.drawable.hide),
-            contentDescription = "icon hide")
+            contentDescription = "icon hide"
+        )
     }
 }
 
@@ -123,6 +125,7 @@ fun Expanded(
         modifier = Modifier
             .background(Green20)
             .fillMaxWidth(0.95f)
+            .clickable { onImageClick() }
             .padding(dimensionResource(id = R.dimen.padding_small)),
         verticalAlignment = Alignment.Top,
         horizontalArrangement = Arrangement.SpaceBetween
@@ -133,8 +136,7 @@ fun Expanded(
         )
         Image(
             modifier = Modifier
-                .size(dimensionResource(id = R.dimen.padding_large))
-                .clickable { onImageClick() },
+                .size(dimensionResource(id = R.dimen.padding_large)),
             painter = painterResource(id = R.drawable.view),
             contentDescription = "icon view")
     }

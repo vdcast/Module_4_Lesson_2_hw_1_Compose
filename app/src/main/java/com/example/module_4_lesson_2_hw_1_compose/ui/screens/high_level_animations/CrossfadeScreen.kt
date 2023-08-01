@@ -63,7 +63,7 @@ fun SomeImage() {
     ) {
         Image(
             modifier = Modifier.fillMaxSize(),
-            painter = painterResource(id = R.drawable.colored_cards_128x128),
+            painter = painterResource(id = R.drawable.vd_cast_green_mono_1_128x128_rounded_corner),
             contentDescription = "crossfade image"
         )
     }
