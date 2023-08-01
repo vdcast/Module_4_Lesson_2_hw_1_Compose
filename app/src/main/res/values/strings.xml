@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Module_4_Lesson_2_hw_1_Compose</string>
+    <string name="home_title">In this App you can see some of Compose animations.</string>
+    <string name="high_level_animations">High Level Animations</string>
+    <string name="low_level_animations">Low Level Animations</string>
+    <string name="animated_visibility_1">Animated Visibility 1</string>
+    <string name="animated_visibility_2">Animated Visibility 2</string>
+    <string name="change_visibility">Change visibility</string>
 </resources>
