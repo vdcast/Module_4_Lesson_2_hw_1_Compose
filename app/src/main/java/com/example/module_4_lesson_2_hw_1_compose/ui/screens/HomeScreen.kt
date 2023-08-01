@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -30,9 +31,10 @@ fun HomeScreen(
         Text(
             modifier = Modifier
                 .fillMaxWidth(0.8f)
-                .padding(bottom = dimensionResource(id = R.dimen.padding_medium)),
+                .padding(bottom = dimensionResource(id = R.dimen.padding_xlarge)),
             text = stringResource(id = R.string.home_title),
-            textAlign = TextAlign.Center
+            textAlign = TextAlign.Center,
+            style = MaterialTheme.typography.titleLarge
         )
         Button(
             modifier = Modifier.fillMaxWidth(0.7f),

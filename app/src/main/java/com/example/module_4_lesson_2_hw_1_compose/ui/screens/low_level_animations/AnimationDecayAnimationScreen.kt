@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -58,7 +59,8 @@ fun AnimationDecayAnimationScreen() {
         Text(
             modifier = Modifier.fillMaxWidth(0.8f),
             text = stringResource(id = R.string.animation_decay_animation),
-            textAlign = TextAlign.Center
+            textAlign = TextAlign.Center,
+            style = MaterialTheme.typography.titleLarge
         )
         Image(
             modifier = Modifier.size(animationValue.dp),
