@@ -19,8 +19,8 @@ import com.example.module_4_lesson_2_hw_1_compose.ui.theme.Module_4_Lesson_2_hw_
 
 @Composable
 fun HomeScreen(
-    onHighLevelClicked: () -> Unit,
-    onLowLevelClicked: () -> Unit
+    onHighLevelClick: () -> Unit,
+    onLowLevelClick: () -> Unit
 ) {
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -35,10 +35,10 @@ fun HomeScreen(
             textAlign = TextAlign.Center
         )
         Button(onClick = {
-            onHighLevelClicked()
+            onHighLevelClick()
         }) { Text(text = stringResource(id = R.string.high_level_animations)) }
         Button(onClick = {
-            onLowLevelClicked()
+            onLowLevelClick()
         }) { Text(text = stringResource(id = R.string.low_level_animations)) }
     }
 }

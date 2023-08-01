@@ -15,8 +15,9 @@ import com.example.module_4_lesson_2_hw_1_compose.R
 
 @Composable
 fun HighLevelAnimationsScreen(
-    onAnimatedVisibilityClicked: () -> Unit,
-    onAnimatedContentClicked: () -> Unit
+    onAnimatedVisibilityClick: () -> Unit,
+    onAnimatedContentClick: () -> Unit,
+    onCrossfadeClick: () -> Unit
 ) {
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -29,10 +30,16 @@ fun HighLevelAnimationsScreen(
             textAlign = TextAlign.Center
         )
         Button(onClick = {
-            onAnimatedVisibilityClicked()
+            onAnimatedVisibilityClick()
         }) { Text(text = stringResource(id = R.string.animated_visibility)) }
         Button(onClick = {
-            onAnimatedContentClicked()
+            onAnimatedContentClick()
         }) { Text(text = stringResource(id = R.string.animated_content)) }
+        Button(onClick = {
+            onCrossfadeClick()
+        }) { Text(text = stringResource(id = R.string.crossfade)) }
+        Button(onClick = {
+            onAnimatedContentClick()
+        }) { Text(text = stringResource(id = R.string.modifier_animateContentSize)) }
     }
 }

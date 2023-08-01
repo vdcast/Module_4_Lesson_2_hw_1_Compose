@@ -6,4 +6,5 @@ sealed class ScreenRoutes(val route: String) {
     object LowLevelAnimationsScreen : ScreenRoutes("low_level_animations_screen")
     object AnimatedVisibilityScreen : ScreenRoutes("animated_visibility_screen")
     object AnimatedContentScreen : ScreenRoutes("animated_content_screen")
+    object CrossfadeScreen : ScreenRoutes("crossfade_screen")
 }
