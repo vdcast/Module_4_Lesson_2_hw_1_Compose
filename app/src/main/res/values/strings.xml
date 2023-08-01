@@ -5,5 +5,7 @@
     <string name="low_level_animations">Low Level Animations</string>
     <string name="animated_visibility_1">Animated Visibility 1</string>
     <string name="animated_visibility_2">Animated Visibility 2</string>
+    <string name="animated_content">Animated Content</string>
     <string name="change_visibility">Change visibility</string>
+    <string name="long_text">Very large text! Such a large text that does not fit in one line. It must be moved to several lines. Then it will look much better. Otherwise, the user won\'t get what we wanna say.</string>
 </resources>

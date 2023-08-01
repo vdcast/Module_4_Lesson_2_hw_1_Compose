@@ -19,6 +19,7 @@ import com.example.module_4_lesson_2_hw_1_compose.ui.theme.Module_4_Lesson_2_hw_
 fun HighLevelAnimationsScreen(
     onAnimatedVisibilityOneClicked: () -> Unit,
     onAnimatedVisibilityTwoClicked: () -> Unit,
+    onAnimatedContentClicked: () -> Unit
 ) {
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -36,13 +37,8 @@ fun HighLevelAnimationsScreen(
         Button(onClick = {
             onAnimatedVisibilityTwoClicked()
         }) { Text(text = stringResource(id = R.string.animated_visibility_2)) }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun HighLevelAnimationsScreenPreview() {
-    Module_4_Lesson_2_hw_1_ComposeTheme {
-        HighLevelAnimationsScreen({}, {})
+        Button(onClick = {
+            onAnimatedContentClicked()
+        }) { Text(text = stringResource(id = R.string.animated_content)) }
     }
 }

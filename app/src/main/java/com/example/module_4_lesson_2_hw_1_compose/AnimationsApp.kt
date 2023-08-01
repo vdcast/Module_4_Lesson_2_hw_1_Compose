@@ -1,6 +1,9 @@
 package com.example.module_4_lesson_2_hw_1_compose
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -11,35 +14,44 @@ import com.example.module_4_lesson_2_hw_1_compose.ui.screens.high_level_animatio
 import com.example.module_4_lesson_2_hw_1_compose.ui.screens.high_level_animations.HighLevelAnimationsScreen
 import com.example.module_4_lesson_2_hw_1_compose.ui.screens.HomeScreen
 import com.example.module_4_lesson_2_hw_1_compose.ui.screens.LowLevelAnimations
+import com.example.module_4_lesson_2_hw_1_compose.ui.screens.high_level_animations.AnimatedContentScreen
+import com.example.module_4_lesson_2_hw_1_compose.ui.theme.Green10
 
 @Composable
 fun AnimationsApp(
     navController: NavHostController = rememberNavController()
 ) {
-    NavHost(
-        navController = navController,
-        startDestination = ScreenRoutes.HomeScreen.route
-    ) {
-        composable(ScreenRoutes.HomeScreen.route) {
-            HomeScreen(
-                onHighLevelClicked = { navController.navigate(ScreenRoutes.HighLevelAnimations.route) },
-                onLowLevelClicked = { navController.navigate(ScreenRoutes.LowLevelAnimations.route) }
-            )
-        }
-        composable(ScreenRoutes.HighLevelAnimations.route) {
-            HighLevelAnimationsScreen(
-                onAnimatedVisibilityOneClicked = { navController.navigate(ScreenRoutes.AnimatedVisibilityOne.route) },
-                onAnimatedVisibilityTwoClicked = { navController.navigate(ScreenRoutes.AnimatedVisibilityTwo.route) }
-            )
-        }
-        composable(ScreenRoutes.LowLevelAnimations.route) {
-            LowLevelAnimations()
-        }
-        composable(ScreenRoutes.AnimatedVisibilityOne.route) {
-            AnimatedVisibilityOneScreen()
-        }
-        composable(ScreenRoutes.AnimatedVisibilityTwo.route) {
-            AnimatedVisibilityTwoScreen()
+    Box(modifier = Modifier.background(Green10)) {
+        NavHost(
+            navController = navController,
+            startDestination = ScreenRoutes.HomeScreen.route
+        ) {
+            composable(ScreenRoutes.HomeScreen.route) {
+                HomeScreen(
+                    onHighLevelClicked = { navController.navigate(ScreenRoutes.HighLevelAnimationsScreen.route) },
+                    onLowLevelClicked = { navController.navigate(ScreenRoutes.LowLevelAnimationsScreen.route) }
+                )
+            }
+            composable(ScreenRoutes.HighLevelAnimationsScreen.route) {
+                HighLevelAnimationsScreen(
+                    onAnimatedVisibilityOneClicked = { navController.navigate(ScreenRoutes.AnimatedVisibilityOneScreen.route) },
+                    onAnimatedVisibilityTwoClicked = { navController.navigate(ScreenRoutes.AnimatedVisibilityTwoScreen.route) },
+                    onAnimatedContentClicked = { navController.navigate(ScreenRoutes.AnimatedContentScreen.route) }
+                )
+            }
+            composable(ScreenRoutes.LowLevelAnimationsScreen.route) {
+                LowLevelAnimations()
+            }
+            composable(ScreenRoutes.AnimatedVisibilityOneScreen.route) {
+                AnimatedVisibilityOneScreen()
+            }
+            composable(ScreenRoutes.AnimatedVisibilityTwoScreen.route) {
+                AnimatedVisibilityTwoScreen()
+            }
+            composable(ScreenRoutes.AnimatedContentScreen.route) {
+                AnimatedContentScreen()
+            }
         }
     }
+
 }

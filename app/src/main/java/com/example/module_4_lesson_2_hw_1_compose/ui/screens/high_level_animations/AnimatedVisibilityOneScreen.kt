@@ -7,6 +7,8 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkHorizontally
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -23,13 +25,15 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.res.painterResource
 
 @Composable
 fun AnimatedVisibilityOneScreen() {
     var visible by remember { mutableStateOf(false) }
 
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceBetween
     ) {
@@ -38,17 +42,19 @@ fun AnimatedVisibilityOneScreen() {
             text = stringResource(id = R.string.animated_visibility_1),
             textAlign = TextAlign.Center
         )
-
         AnimatedVisibility(
+            modifier = Modifier.fillMaxWidth(),
             visible = visible,
             enter = slideInHorizontally() + expandHorizontally(expandFrom = Alignment.End)
                     + fadeIn(),
             exit = slideOutHorizontally(targetOffsetX = { fullWidth ->  fullWidth})
                     + shrinkHorizontally() + fadeOut()
         ) {
-            Text(text = stringResource(id = R.string.change_visibility))
+            Image(
+                painter = painterResource(id = R.drawable.colored_cards_128x128),
+                contentDescription = "animated_visibility_1"
+            )
         }
-
         Button(onClick = {
             visible = !visible
         }) { Text(text = stringResource(id = R.string.change_visibility)) }
