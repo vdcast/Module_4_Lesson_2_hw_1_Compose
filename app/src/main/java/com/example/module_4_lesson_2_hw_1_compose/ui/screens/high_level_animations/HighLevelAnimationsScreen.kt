@@ -11,14 +11,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import com.example.module_4_lesson_2_hw_1_compose.R
-import com.example.module_4_lesson_2_hw_1_compose.ui.theme.Module_4_Lesson_2_hw_1_ComposeTheme
 
 @Composable
 fun HighLevelAnimationsScreen(
-    onAnimatedVisibilityOneClicked: () -> Unit,
-    onAnimatedVisibilityTwoClicked: () -> Unit,
+    onAnimatedVisibilityClicked: () -> Unit,
     onAnimatedContentClicked: () -> Unit
 ) {
     Column(
@@ -32,11 +29,8 @@ fun HighLevelAnimationsScreen(
             textAlign = TextAlign.Center
         )
         Button(onClick = {
-            onAnimatedVisibilityOneClicked()
-        }) { Text(text = stringResource(id = R.string.animated_visibility_1)) }
-        Button(onClick = {
-            onAnimatedVisibilityTwoClicked()
-        }) { Text(text = stringResource(id = R.string.animated_visibility_2)) }
+            onAnimatedVisibilityClicked()
+        }) { Text(text = stringResource(id = R.string.animated_visibility)) }
         Button(onClick = {
             onAnimatedContentClicked()
         }) { Text(text = stringResource(id = R.string.animated_content)) }

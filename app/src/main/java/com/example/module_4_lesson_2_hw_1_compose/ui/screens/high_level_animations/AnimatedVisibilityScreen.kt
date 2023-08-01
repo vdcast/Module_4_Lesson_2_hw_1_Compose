@@ -1,6 +1,8 @@
 package com.example.module_4_lesson_2_hw_1_compose.ui.screens.high_level_animations
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.tween
 import androidx.compose.animation.expandHorizontally
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -8,7 +10,6 @@ import androidx.compose.animation.shrinkHorizontally
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -28,8 +29,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.painterResource
 
 @Composable
-fun AnimatedVisibilityOneScreen() {
-    var visible by remember { mutableStateOf(false) }
+fun AnimatedVisibilityScreen() {
+    var visibleOne by remember { mutableStateOf(false) }
+    var visibleTwo by remember { mutableStateOf(false) }
 
     Column(
         modifier = Modifier
@@ -44,7 +46,7 @@ fun AnimatedVisibilityOneScreen() {
         )
         AnimatedVisibility(
             modifier = Modifier.fillMaxWidth(),
-            visible = visible,
+            visible = visibleOne,
             enter = slideInHorizontally() + expandHorizontally(expandFrom = Alignment.End)
                     + fadeIn(),
             exit = slideOutHorizontally(targetOffsetX = { fullWidth ->  fullWidth})
@@ -55,8 +57,23 @@ fun AnimatedVisibilityOneScreen() {
                 contentDescription = "animated_visibility_1"
             )
         }
-        Button(onClick = {
-            visible = !visible
-        }) { Text(text = stringResource(id = R.string.change_visibility)) }
+        AnimatedVisibility(
+            visible = visibleTwo,
+            enter = fadeIn(animationSpec = tween(durationMillis = 300, easing = LinearEasing)),
+            exit = fadeOut(animationSpec = tween(durationMillis = 300))
+        ) {
+            Image(
+                painter = painterResource(id = R.drawable.colored_cards_128x128),
+                contentDescription = "animated_visibility_1"
+            )
+        }
+        Column() {
+            Button(onClick = {
+                visibleOne = !visibleOne
+            }) { Text(text = stringResource(id = R.string.animated_visibility_1)) }
+            Button(onClick = {
+                visibleTwo = !visibleTwo
+            }) { Text(text = stringResource(id = R.string.animated_visibility_2)) }
+        }
     }
 }

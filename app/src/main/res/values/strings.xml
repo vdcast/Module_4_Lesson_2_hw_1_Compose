@@ -3,6 +3,7 @@
     <string name="home_title">In this App you can see some of Compose animations.</string>
     <string name="high_level_animations">High Level Animations</string>
     <string name="low_level_animations">Low Level Animations</string>
+    <string name="animated_visibility">Animated Visibility</string>
     <string name="animated_visibility_1">Animated Visibility 1</string>
     <string name="animated_visibility_2">Animated Visibility 2</string>
     <string name="animated_content">Animated Content</string>

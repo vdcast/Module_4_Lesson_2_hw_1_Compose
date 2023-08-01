@@ -9,12 +9,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.module_4_lesson_2_hw_1_compose.ui.navigation.ScreenRoutes
-import com.example.module_4_lesson_2_hw_1_compose.ui.screens.high_level_animations.AnimatedVisibilityOneScreen
-import com.example.module_4_lesson_2_hw_1_compose.ui.screens.high_level_animations.AnimatedVisibilityTwoScreen
-import com.example.module_4_lesson_2_hw_1_compose.ui.screens.high_level_animations.HighLevelAnimationsScreen
 import com.example.module_4_lesson_2_hw_1_compose.ui.screens.HomeScreen
 import com.example.module_4_lesson_2_hw_1_compose.ui.screens.LowLevelAnimations
 import com.example.module_4_lesson_2_hw_1_compose.ui.screens.high_level_animations.AnimatedContentScreen
+import com.example.module_4_lesson_2_hw_1_compose.ui.screens.high_level_animations.AnimatedVisibilityScreen
+import com.example.module_4_lesson_2_hw_1_compose.ui.screens.high_level_animations.HighLevelAnimationsScreen
 import com.example.module_4_lesson_2_hw_1_compose.ui.theme.Green10
 
 @Composable
@@ -34,19 +33,15 @@ fun AnimationsApp(
             }
             composable(ScreenRoutes.HighLevelAnimationsScreen.route) {
                 HighLevelAnimationsScreen(
-                    onAnimatedVisibilityOneClicked = { navController.navigate(ScreenRoutes.AnimatedVisibilityOneScreen.route) },
-                    onAnimatedVisibilityTwoClicked = { navController.navigate(ScreenRoutes.AnimatedVisibilityTwoScreen.route) },
+                    onAnimatedVisibilityClicked = { navController.navigate(ScreenRoutes.AnimatedVisibilityScreen.route) },
                     onAnimatedContentClicked = { navController.navigate(ScreenRoutes.AnimatedContentScreen.route) }
                 )
             }
             composable(ScreenRoutes.LowLevelAnimationsScreen.route) {
                 LowLevelAnimations()
             }
-            composable(ScreenRoutes.AnimatedVisibilityOneScreen.route) {
-                AnimatedVisibilityOneScreen()
-            }
-            composable(ScreenRoutes.AnimatedVisibilityTwoScreen.route) {
-                AnimatedVisibilityTwoScreen()
+            composable(ScreenRoutes.AnimatedVisibilityScreen.route) {
+                AnimatedVisibilityScreen()
             }
             composable(ScreenRoutes.AnimatedContentScreen.route) {
                 AnimatedContentScreen()
