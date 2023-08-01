@@ -6,11 +6,9 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
@@ -36,7 +34,8 @@ fun ModifierAnimateContentSizeScreen() {
 
     Column(
         modifier = Modifier
-            .fillMaxSize(),
+            .fillMaxSize()
+            .padding(vertical = dimensionResource(id = R.dimen.padding_medium)),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceBetween
     ) {
@@ -45,7 +44,6 @@ fun ModifierAnimateContentSizeScreen() {
             text = stringResource(id = R.string.modifier_animateContentSize),
             textAlign = TextAlign.Center
         )
-
         Column(
             modifier = Modifier
                 .fillMaxWidth(0.75f)
@@ -61,7 +59,6 @@ fun ModifierAnimateContentSizeScreen() {
                 )
             }
         }
-
         Button(
             modifier = Modifier.fillMaxWidth(0.7f),
             onClick = { visible = !visible }

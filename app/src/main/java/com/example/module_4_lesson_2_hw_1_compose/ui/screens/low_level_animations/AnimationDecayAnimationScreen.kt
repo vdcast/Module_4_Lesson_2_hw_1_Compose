@@ -2,14 +2,12 @@ package com.example.module_4_lesson_2_hw_1_compose.ui.screens.low_level_animatio
 
 import androidx.compose.animation.core.DecayAnimation
 import androidx.compose.animation.core.FloatExponentialDecaySpec
-import androidx.compose.animation.core.TargetBasedAnimation
-import androidx.compose.animation.core.VectorConverter
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
@@ -22,6 +20,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.withFrameNanos
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -51,23 +50,21 @@ fun AnimationDecayAnimationScreen() {
 
     Column(
         modifier = Modifier
-            .fillMaxSize(),
+            .fillMaxSize()
+            .padding(vertical = dimensionResource(id = R.dimen.padding_medium)),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceBetween
     ) {
-
         Text(
             modifier = Modifier.fillMaxWidth(0.8f),
             text = stringResource(id = R.string.animation_decay_animation),
             textAlign = TextAlign.Center
         )
-
         Image(
             modifier = Modifier.size(animationValue.dp),
             painter = painterResource(id = R.drawable.vd_cast_green_mono_1_128x128_rounded_corner),
             contentDescription = "animated_visibility_1"
         )
-
         Button(
             modifier = Modifier.fillMaxWidth(0.7f),
             onClick = { state = !state }

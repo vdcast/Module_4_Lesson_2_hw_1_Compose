@@ -32,11 +32,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.IntSize
 import com.example.module_4_lesson_2_hw_1_compose.R
 import com.example.module_4_lesson_2_hw_1_compose.ui.theme.Green20
-import com.example.module_4_lesson_2_hw_1_compose.ui.theme.Module_4_Lesson_2_hw_1_ComposeTheme
 
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
@@ -45,7 +43,8 @@ fun AnimatedContentScreen() {
 
     Column(
         modifier = Modifier
-            .fillMaxSize(),
+            .fillMaxSize()
+            .padding(vertical = dimensionResource(id = R.dimen.padding_medium)),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceBetween
     ) {
@@ -115,7 +114,6 @@ fun Collapsed(
         )
     }
 }
-
 
 @Composable
 fun Expanded(

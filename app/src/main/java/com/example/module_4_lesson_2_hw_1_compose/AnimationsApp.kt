@@ -10,7 +10,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.module_4_lesson_2_hw_1_compose.ui.navigation.ScreenRoutes
 import com.example.module_4_lesson_2_hw_1_compose.ui.screens.HomeScreen
-import com.example.module_4_lesson_2_hw_1_compose.ui.screens.low_level_animations.LowLevelAnimations
 import com.example.module_4_lesson_2_hw_1_compose.ui.screens.high_level_animations.AnimatedContentScreen
 import com.example.module_4_lesson_2_hw_1_compose.ui.screens.high_level_animations.AnimatedVisibilityScreen
 import com.example.module_4_lesson_2_hw_1_compose.ui.screens.high_level_animations.CrossfadeScreen
@@ -20,6 +19,7 @@ import com.example.module_4_lesson_2_hw_1_compose.ui.screens.low_level_animation
 import com.example.module_4_lesson_2_hw_1_compose.ui.screens.low_level_animations.AnimateAsStateScreen
 import com.example.module_4_lesson_2_hw_1_compose.ui.screens.low_level_animations.AnimationDecayAnimationScreen
 import com.example.module_4_lesson_2_hw_1_compose.ui.screens.low_level_animations.AnimationTargetBasedAnimationScreen
+import com.example.module_4_lesson_2_hw_1_compose.ui.screens.low_level_animations.LowLevelAnimations
 import com.example.module_4_lesson_2_hw_1_compose.ui.screens.low_level_animations.RememberInfiniteTransitionScreen
 import com.example.module_4_lesson_2_hw_1_compose.ui.screens.low_level_animations.UpdateTransitionScreen
 import com.example.module_4_lesson_2_hw_1_compose.ui.theme.Green10
