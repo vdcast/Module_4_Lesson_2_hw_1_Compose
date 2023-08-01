@@ -15,6 +15,7 @@ import com.example.module_4_lesson_2_hw_1_compose.ui.screens.high_level_animatio
 import com.example.module_4_lesson_2_hw_1_compose.ui.screens.high_level_animations.AnimatedVisibilityScreen
 import com.example.module_4_lesson_2_hw_1_compose.ui.screens.high_level_animations.CrossfadeScreen
 import com.example.module_4_lesson_2_hw_1_compose.ui.screens.high_level_animations.HighLevelAnimationsScreen
+import com.example.module_4_lesson_2_hw_1_compose.ui.screens.high_level_animations.ModifierAnimateContentSizeScreen
 import com.example.module_4_lesson_2_hw_1_compose.ui.theme.Green10
 
 @Composable
@@ -34,9 +35,18 @@ fun AnimationsApp(
             }
             composable(ScreenRoutes.HighLevelAnimationsScreen.route) {
                 HighLevelAnimationsScreen(
-                    onAnimatedVisibilityClick = { navController.navigate(ScreenRoutes.AnimatedVisibilityScreen.route) },
-                    onAnimatedContentClick = { navController.navigate(ScreenRoutes.AnimatedContentScreen.route) },
-                    onCrossfadeClick = { navController.navigate(ScreenRoutes.CrossfadeScreen.route) }
+                    onAnimatedVisibilityClick = {
+                        navController.navigate(ScreenRoutes.AnimatedVisibilityScreen.route)
+                    },
+                    onAnimatedContentClick = {
+                        navController.navigate(ScreenRoutes.AnimatedContentScreen.route)
+                    },
+                    onCrossfadeClick = {
+                        navController.navigate(ScreenRoutes.CrossfadeScreen.route)
+                    },
+                    onModifierAnimateContentSizeClick = {
+                        navController.navigate(ScreenRoutes.ModifierAnimateContentSizeScreen.route)
+                    }
                 )
             }
             composable(ScreenRoutes.LowLevelAnimationsScreen.route) {
@@ -50,6 +60,9 @@ fun AnimationsApp(
             }
             composable(ScreenRoutes.CrossfadeScreen.route) {
                 CrossfadeScreen()
+            }
+            composable(ScreenRoutes.ModifierAnimateContentSizeScreen.route) {
+                ModifierAnimateContentSizeScreen()
             }
         }
     }

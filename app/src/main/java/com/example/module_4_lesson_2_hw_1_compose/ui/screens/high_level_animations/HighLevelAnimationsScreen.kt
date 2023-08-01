@@ -17,7 +17,8 @@ import com.example.module_4_lesson_2_hw_1_compose.R
 fun HighLevelAnimationsScreen(
     onAnimatedVisibilityClick: () -> Unit,
     onAnimatedContentClick: () -> Unit,
-    onCrossfadeClick: () -> Unit
+    onCrossfadeClick: () -> Unit,
+    onModifierAnimateContentSizeClick: () -> Unit
 ) {
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -29,17 +30,21 @@ fun HighLevelAnimationsScreen(
             text = stringResource(id = R.string.high_level_animations),
             textAlign = TextAlign.Center
         )
-        Button(onClick = {
-            onAnimatedVisibilityClick()
-        }) { Text(text = stringResource(id = R.string.animated_visibility)) }
-        Button(onClick = {
-            onAnimatedContentClick()
-        }) { Text(text = stringResource(id = R.string.animated_content)) }
-        Button(onClick = {
-            onCrossfadeClick()
-        }) { Text(text = stringResource(id = R.string.crossfade)) }
-        Button(onClick = {
-            onAnimatedContentClick()
-        }) { Text(text = stringResource(id = R.string.modifier_animateContentSize)) }
+        Button(
+            modifier = Modifier.fillMaxWidth(0.7f),
+            onClick = { onAnimatedVisibilityClick() }
+        ) { Text(text = stringResource(id = R.string.animated_visibility)) }
+        Button(
+            modifier = Modifier.fillMaxWidth(0.7f),
+            onClick = { onAnimatedContentClick() }
+        ) { Text(text = stringResource(id = R.string.animated_content)) }
+        Button(
+            modifier = Modifier.fillMaxWidth(0.7f),
+            onClick = { onCrossfadeClick() }
+        ) { Text(text = stringResource(id = R.string.crossfade)) }
+        Button(
+            modifier = Modifier.fillMaxWidth(0.7f),
+            onClick = { onModifierAnimateContentSizeClick() }
+        ) { Text(text = stringResource(id = R.string.modifier_animateContentSize)) }
     }
 }

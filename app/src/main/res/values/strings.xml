@@ -12,4 +12,5 @@
     <string name="change_visibility">Change visibility</string>
     <string name="long_text">Very large text! Such a large text that does not fit in one line. It must be moved to several lines. Then it will look much better. Otherwise, the user won\'t get what we wanna say.</string>
     <string name="some_text">Some text that can be displayed on the screen.</string>
+    <string name="title">Title (clickable)</string>
 </resources>

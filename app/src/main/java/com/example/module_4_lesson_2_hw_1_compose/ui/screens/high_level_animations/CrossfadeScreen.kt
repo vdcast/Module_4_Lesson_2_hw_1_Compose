@@ -45,9 +45,10 @@ fun CrossfadeScreen() {
             }
         }
 
-        Button(onClick = {
-            visibleState = !visibleState
-        }) { Text(text = stringResource(id = R.string.change_visibility)) }
+        Button(
+            modifier = Modifier.fillMaxWidth(0.7f),
+            onClick = { visibleState = !visibleState }
+        ) { Text(text = stringResource(id = R.string.change_visibility)) }
     }
 }
 

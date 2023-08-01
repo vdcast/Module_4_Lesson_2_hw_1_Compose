@@ -7,4 +7,5 @@ sealed class ScreenRoutes(val route: String) {
     object AnimatedVisibilityScreen : ScreenRoutes("animated_visibility_screen")
     object AnimatedContentScreen : ScreenRoutes("animated_content_screen")
     object CrossfadeScreen : ScreenRoutes("crossfade_screen")
+    object ModifierAnimateContentSizeScreen : ScreenRoutes("modifier_animate_content_size_screen")
 }

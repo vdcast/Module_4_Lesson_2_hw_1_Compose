@@ -34,12 +34,14 @@ fun HomeScreen(
             text = stringResource(id = R.string.home_title),
             textAlign = TextAlign.Center
         )
-        Button(onClick = {
-            onHighLevelClick()
-        }) { Text(text = stringResource(id = R.string.high_level_animations)) }
-        Button(onClick = {
-            onLowLevelClick()
-        }) { Text(text = stringResource(id = R.string.low_level_animations)) }
+        Button(
+            modifier = Modifier.fillMaxWidth(0.7f),
+            onClick = { onHighLevelClick() }
+        ) { Text(text = stringResource(id = R.string.high_level_animations)) }
+        Button(
+            modifier = Modifier.fillMaxWidth(0.7f),
+            onClick = { onLowLevelClick() }
+        ) { Text(text = stringResource(id = R.string.low_level_animations)) }
     }
 }
 

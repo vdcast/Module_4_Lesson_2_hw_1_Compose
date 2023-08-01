@@ -68,12 +68,14 @@ fun AnimatedVisibilityScreen() {
             )
         }
         Column() {
-            Button(onClick = {
-                visibleOne = !visibleOne
-            }) { Text(text = stringResource(id = R.string.animated_visibility_1)) }
-            Button(onClick = {
-                visibleTwo = !visibleTwo
-            }) { Text(text = stringResource(id = R.string.animated_visibility_2)) }
+            Button(
+                modifier = Modifier.fillMaxWidth(0.7f),
+                onClick = { visibleOne = !visibleOne }
+            ) { Text(text = stringResource(id = R.string.animated_visibility_1)) }
+            Button(
+                modifier = Modifier.fillMaxWidth(0.7f),
+                onClick = { visibleTwo = !visibleTwo }
+            ) { Text(text = stringResource(id = R.string.animated_visibility_2)) }
         }
     }
 }
