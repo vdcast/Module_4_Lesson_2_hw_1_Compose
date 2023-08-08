@@ -1,0 +1,5 @@
+# Module_4_Lesson_2_hw_1_Compose
+
+Screen recoding:
+
+![Module_4_Lesson_2_hw_1_Compose](https://github.com/vdcast/Module_4_Lesson_2_hw_1_Compose/assets/108469609/0bff6057-516e-4e22-afc3-473c486e8ed4)
